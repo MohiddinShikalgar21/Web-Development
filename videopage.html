@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CrackIt!</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="videopage.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+        <style>
+             @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+            * {
+              font-family: 'Nunito', sans-serif;
+              margin: 0;
+              padding: 0;
+              -webkit-box-sizing: border-box;
+                      box-sizing: border-box;
+              outline: none;
+              border: none;
+              text-decoration: none;
+              -webkit-transition: all .2s linear;
+              transition: all .2s linear;
+            }
+            .logo
+            {
+                margin: 0 50px;
+                margin-top: 10px;
+                height: 60px;
+                float: left;
+                color: #fff;
+                font-size: 35px;
+                text-transform: capitalize;
+                font-weight: bold;
+                letter-spacing: 0px;
+            }
+            .logo span
+            {
+                color: #f5bb00;
+            }
+            nav
+            {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding-right: 50px;
+              word-spacing: 6px;
+            }
+            .navlinks
+            {
+              padding: 28px 0;
+            }
+            .navlinks li{
+              display: inline-block;
+              margin: 0 7px;
+            }
+            .navlinks li a
+            {
+              text-decoration: none;
+              color: #fff;
+              padding: 5px 0;
+              position: relative;
+              font-size: 16px;
+            }
+            .navlinks li a::after
+            {
+              content: ' ';
+              background: #fff;
+              width: 0;
+              height: 2px;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              transition: width 0.5s;
+            }
+            .navlinks li a:hover::after
+            {
+              width: 100%;
+            }
+            .btn2
+            {
+              background: #3abdb6b0;
+              color: #fff;
+              padding: 10px 25px;
+              border-radius: 3px;
+              cursor: pointer;
+            }
+            label #btn,
+            label #cancel
+            {
+              color: white;
+              font-size: 30px;
+              float: right;
+              line-height:80px;
+              margin-right: 40px;
+              cursor: pointer;
+              display: none;
+            }
+            #check{
+              display: none;
+            }
+            @media(max-width:1118px) {
+              
+            }
+
+            .header-content{
+              z-index:2;
+              text-align: center;
+            }
+            .v-header
+            {
+              align-items: center;
+              margin-right: 0;
+            }
+
+            .btn
+            {
+                display: inline-block;
+                border: 1px solid #fff;
+                background: transparent;
+                color:#fff;
+                font-size:1.2rem;
+                padding: 1rem 2rem;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            
+            .btn:hover
+            {
+              border: 1px solid #3abdb6b0;
+              background: #3abdb6b0;
+              transition: 1s;
+              box-shadow: 0 0 20px 0px rgba(0, 0, 0, 2.5);
+            }
+            .btn2:hover
+            {
+              border: 1px solid #3abdb6b0;
+              background: #3abdb6b0;
+              transition: 1s;
+              box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.6);
+            }
+
+         </style>
+         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+      </head>
+    <body>
+
+        <div class="header">
+          
+           <nav>
+           <div class="logo"><span>Crack</span>It!</div>
+           <input type="checkbox" id="check">
+           <label for="check">
+             <i class="fas fa-bars" id="btn"></i>
+             <i class="fas fa-times" id="cancel"></i>
+           </label>
+           <ul class="navlinks">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">Exam</a></li>
+              <li><a href="#">More</a></li>
+              <li><a href="#">About</a></li>
+              <li class="btn2"><a href="#">GetStarted</a></li>
+           </ul>
+           </nav>
+          
+
+            </div>
+          </div>
+        </div>
+        </header>
+          <div class="v-header container">
+            <div class="fullscreen-video-wrap">
+              <video autoplay muted loop id="myVideo" style="width: 100%;"> 
+                <source src="bg.mp4" type="video/mp4"></video>
+              </div>
+              <div class="header-content text-md-center" style="margin-top:-70px;">
+                <h1>WELCOME <span style="color: #f5bb00;">ASPIRANTS!</span></h1>
+                <p>To a place where you can test your MHT CET preparations and lead yourself closer to your goal by uplifting your preparations.<span style="color: #f5bb00;"> Just Remember that it's not about how bad you want it, it's about how hard you are willing to work for it.</span> </p>
+                <a class="btn" href="more.php">Find Out More</a>
+              </div>
+            </div>
+
+        </body>
+        </html>

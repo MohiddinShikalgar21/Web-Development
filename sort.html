@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Operations</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+   *{
+       font-family: 'Nunito', sans-serif;
+       
+    }
+    body{
+        box-sizing: border-box;
+       background: -webkit-linear-gradient(to right, #155799, #159957); 
+       background: linear-gradient(to right, #155799, #159957); 
+       color:whitesmoke;
+    }
+    .b{
+       justify-content: center;
+       margin-left: 25%;
+       padding: 2%;
+       width:35rem;
+       color:whitesmoke;
+       backdrop-filter: blur(16px) saturate(180%);
+       -webkit-backdrop-filter: blur(16px) saturate(180%);
+       background-color: rgba(11, 15, 13, 0.582);
+       border-radius: 12px;
+       border: 1px solid rgba(255, 255, 255, 0.125);       
+    }
+    button {
+      background-color: #155e91;
+      color: white;
+      padding: 1%;
+    } 
+    button:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+   </style>
+</head>
+<body>
+    <div class="box" style="margin-top: 25px;">
+    <div class="b" style="align-items: center;">
+    <h2 style="margin-left: 75px;margin-top: -10px;">Searching and Sorting in Arrays</h2>
+
+    <label for="input">Enter the Array Elements:</label>
+	<input type="text" id="input" name="input">
+
+	<button onclick="performOperations()">Perform Operations</button>
+
+	
+  <div class="rev" style="display: flex;">
+	<p>Reversed Array:</p>
+	<p id="reversed" style="margin-left: 20px;"></p>
+  </div>
+  <div class="sort" style="display: flex;">
+	<p style="font-size: medium;"><b>Sorted Array (Bubble Sort):</b></p>
+	<p id="sorted" style="margin-left: 20px;"></p>
+  </div>
+    <button id="click" style="height: min-content;"> Get sorted array</button>
+    <br>
+  <div class="sort2" style="display: flex;">
+    <p style="font-size: medium;"><b>Sorted Array (Selection Sort):</b></p>
+	<p id="sorted2" style="margin-left: 20px;"></p>
+  </div>
+    <button id="click2" style="height: min-content;"> Get sorted array</button>
+    <br>
+    <p style="font-size: large;"><b>Linear search operation</b></p>
+    <label for="value">Enter value </label>
+    <input type="text" id ="val" name="val">
+    <button onclick="GetIndex()">Get index </button>
+
+	<p id="index"></p>
+
+    <p style="font-size: large;"><b>Binary search operation</b></p>
+    <label for="value">Enter value </label>
+    <input type="text" id ="val" name="val">
+    <button onclick="GetIndex3()">Get Index </button>
+
+	<p id="index3"></p>
+
+	<script>
+		function performOperations() {
+			let input = document.getElementById("input").value;
+			let arr = input.split(",").map(Number);
+            let array = input.split(",").map(Number);
+
+			let reversedArr = arr.reverse();
+			document.getElementById("reversed").innerHTML = reversedArr.join(", ");
+
+			var btn = document.getElementById("click");
+            btn.onclick  = function(){
+               document.getElementById("sorted").innerHTML = bblSort(array); 
+            }
+            var btn2 = document.getElementById("click2");
+            btn2.onclick  = function(){
+               document.getElementById("sorted2").innerHTML = selectionSort(array); 
+            }		
+		} 
+function bblSort(arr){
+    
+    for(var i = 0; i < arr.length; i++){
+       
+      for(var j = 0; j < ( arr.length - i -1 ); j++){         
+        if(arr[j] > arr[j+1]){           
+          var temp = arr[j]
+          arr[j] = arr[j+1]
+          arr[j+1] = temp
+        }
+      }
+    }
+    return arr;
+    // Print the sorted array     
+   }
+   function selectionSort(arr){
+    
+    for(var i = 0; i < arr.length-1; i++){
+       var min=arr[i];
+       var minind=i;
+      for(var j = i+1; j < arr.length; j++){
+          if(arr[j]<min) {
+            min=arr[j];
+            minind=j;
+          }
+      }
+      var temp=arr[i];
+      arr[i]=min;
+      arr[minind]=temp;
+    }
+    return arr;
+    // Print the sorted array     
+   }
+
+        function GetIndex(){
+            let input = document.getElementById("input").value;
+			let arr = input.split(",").map(Number);
+            let value = document.getElementById("val").value;
+			let index = linearSearch(arr, value);
+            document.getElementById("index").innerHTML ="Index of value "+value+" in the sorted array : "+index;
+        }
+        function GetIndex3(){
+            let input = document.getElementById("input").value;
+			let arr = input.split(",").map(Number);
+            let value = document.getElementById("val").value;
+			let index = linearSearch(arr, value);
+            document.getElementById("index3").innerHTML ="Index of value "+value+" in the sorted array : "+index;
+        }
+		// Function to perform a linear search on an array
+		function linearSearch(arr, value) {
+		  for (let i = 0; i < arr.length; i++) {
+		    if (arr[i] == value) {
+		      return i;
+		    }
+		  }
+		  return -1;
+		}
+        function GetIndex2(){
+            let input = document.getElementById("input").value;
+			let arr2 = input.split(",").map(Number);
+            let value2 = document.getElementById("val2").value;
+			let index2 = linearSearch(arr, value);
+            document.getElementById("index2").innerHTML ="Index of value "+value2+" in the sorted array : "+index2;
+        }
+        function binarySearch(sorted_arr, target, start, end) {
+          if (start > end) return -1;
+          let mid = Math.floor((start + end) / 2);
+          if (sorted_arr[mid] == target) return mid;
+          if (sorted_arr[mid] > target)  return binarySearch(sorted_arr, target, start, mid - 1);
+          else return binarySearch(sorted_arr, target, mid + 1, end);
+        }
+         
+	</script>
+    </div>
+</div>
+</body>
+</html>
