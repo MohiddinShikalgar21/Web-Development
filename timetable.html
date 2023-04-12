@@ -14,6 +14,12 @@
           font-family: 'Nunito', sans-serif; 
           font-size:16px;  
         }
+        body{
+           box-sizing: border-box;
+           background: -webkit-linear-gradient(to right, #993415, #159957); 
+           background: linear-gradient(to right, #c01212, #159957); 
+           color:whitesmoke;
+    }
 		.tab-content {
 			border: 1px solid #ddd;
 			padding: 10px;
@@ -32,9 +38,14 @@
         }
         tr{
           border: 1px solid #155e91;
+          color:white;
         }
         tr:nth-child(even){
-          background-color: #c1d6e5;
+          background-color: #c1d6e538;
+        }
+    }
+        tr:nth-child(odd){
+          color: white;
         }
         thead{
           padding-top: 12px;
@@ -52,18 +63,31 @@
           margin:5px;
         }
         li:hover{
-            background: #4bdbe6a6;  
+            color:white;
+            background: #4b7ce654;  
+        }
+        a:hover{
+            color:white;
+        }
+        .nav-item{
+            color:white;
+        }
+        a{
+            color: white;
         }
         tr:hover {
           background: #F5F5F5;
+          color:black;
         }
 
 	</style>
 </head>
 <body>
-<div class="b" style="margin-left:20%;margin-right:20%;margin-top:4%;">
-	<div class="container-fluid">
-		<h2 class="text-center my-4" style="color:#155e91">TY CS-D Timetable</h2>
+<div class="b" style="margin-left:20%;margin-right:20%;margin-top:4%;backdrop-filter: blur(16px) saturate(180%);
+-webkit-backdrop-filter: blur(16px) saturate(180%);
+background-color: rgba(11, 15, 13, 0.582);">
+	<div class="container-fluid" style="padding:20px;">
+		<h3 class="text-center my-4" style="color:white;">TY CS-D Timetable</h3>
         <br>
 		<ul class="nav nav-pills nav-justified mb-4" id="myTab" role="tablist">
 			<li class="nav-item">
