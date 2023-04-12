@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Timetable</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+         @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+       *{
+          font-family: 'Nunito', sans-serif; 
+          font-size:16px;  
+        }
+		.tab-content {
+			border: 1px solid #ddd;
+			padding: 10px;
+			margin-top: 20px;
+		}
+		.table td, .table th {
+			text-align: center;
+			vertical-align: middle;
+		}
+        table{
+          width: 70%;
+          height:75%;
+          margin: 60px auto;
+          border-collapse: collapse;
+          text-align: center;
+        }
+        tr{
+          border: 1px solid #155e91;
+        }
+        tr:nth-child(even){
+          background-color: #c1d6e5;
+        }
+        thead{
+          padding-top: 12px;
+          padding-bottom: 12px;
+          padding-left:20px;
+          text-align: center;
+          background-color: #1c88a1;
+          color: white;
+        }
+        td{
+          border: 1px solid #ddd;
+          padding: 8px;
+          height: 30px;
+          padding: 2px;
+          margin:5px;
+        }
+        li:hover{
+            background: #4bdbe6a6;  
+        }
+        tr:hover {
+          background: #F5F5F5;
+        }
+
+	</style>
+</head>
+<body>
+<div class="b" style="margin-left:20%;margin-right:20%;margin-top:4%;">
+	<div class="container-fluid">
+		<h2 class="text-center my-4" style="color:#155e91">TY CS-D Timetable</h2>
+        <br>
+		<ul class="nav nav-pills nav-justified mb-4" id="myTab" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link active" id="mon-tab" data-toggle="tab" href="#mon" role="tab" aria-controls="mon" aria-selected="true">Monday</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="tue-tab" data-toggle="tab" href="#tue" role="tab" aria-controls="tue" aria-selected="false">Tuesday</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="wed-tab" data-toggle="tab" href="#wed" role="tab" aria-controls="wed" aria-selected="false">Wednesday</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="thu-tab" data-toggle="tab" href="#thu" role="tab" aria-controls="thu" aria-selected="false">Thursday</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="fri-tab" data-toggle="tab" href="#fri" role="tab" aria-controls="fri" aria-selected="false">Friday</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="sat-tab" data-toggle="tab" href="#sat" role="tab" aria-controls="sat" aria-selected="false">Saturday</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="sun-tab" data-toggle="tab" href="#sun" role="tab" aria-controls="sun" aria-selected="false">Sunday</a>
+			</li>
+		</ul>
+
+		<div class="tab-content">
+			<div class="tab-pane fade show active" id="mon" role="tabpanel" aria-labelledby="mon-tab">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Time</th>
+                            <th>Component</th>
+							<th>Class</th>
+							<th>Teacher</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+                            <td>2:00 PM - 3:00 PM</td>
+                            <td>Theory</td>
+                            <td>Web Technology</td>
+                            <td>Prof.Dr.M.L.Dhore</td>
+                        </tr>
+                        <tr>
+                            <td>3:00 PM - 4:00 PM</td>
+                            <td>Theory</td>
+                            <td>DAA</td>
+                            <td>Prof.P.Joglekar</td>
+                        </tr>
+                        <tr>
+                            <td>4:00 PM - 5:00 PM</td>
+                            <td>Theory</td>
+                            <td>Cloud Computing</td>
+                            <td>Prof.Dr.R.Kulkarni</td>
+                        </tr>
+                        <tr>
+                            <td>5:00 PM - 6:00 PM</td>
+                            <td>Theory</td>
+                            <td>Compiler Design</td>
+                            <td>Prof.Dr.S.Phatangare</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="tue" role="tabpanel" aria-labelledby="tue-tab">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Component</th>
+                            <th>Class</th>
+                            <th>Teacher</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2:00 PM - 3:00 PM</td>
+                            <td>Theory</td>
+                            <td>Web Technology</td>
+                            <td>Prof.Dr.M.L.Dhore</td>
+                        </tr>
+                        <tr>
+                            <td>3:00 PM - 4:00 PM</td>
+                            <td>Theory</td>
+                            <td>DAA</td>
+                            <td>Prof.P.Joglekar</td>
+                        </tr>
+                        <tr>
+                            <td>4:00 PM - 5:00 PM</td>
+                            <td>Theory</td>
+                            <td>Cloud Computing</td>
+                            <td>Prof.Dr.R.Kulkarni</td>
+                        </tr>
+                        <tr>
+                            <td>5:00 PM - 6:00 PM</td>
+                            <td>Theory</td>
+                            <td>Compiler Design</td>
+                            <td>Prof.Dr.S.Phatangare</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="wed" role="tabpanel" aria-labelledby="wed-tab">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Component</th>
+                            <th>Class</th>
+                            <th>Teacher</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2:00 PM - 4:00 PM</td>
+                            <td>Lab</td>
+                            <td>Web Technology</td>
+                            <td>Prof.Dr.S.Jaybhaye</td>
+                        </tr>
+                        <tr>
+                            <td>4:00 PM - 6:00 PM</td>
+                            <td>Lab</td>
+                            <td>Cloud Computing</td>
+                            <td>Prof.Dr.R.Kulkarni</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="thu" role="tabpanel" aria-labelledby="thu-tab">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Component</th>
+                            <th>Class</th>
+                            <th>Teacher</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2:00 PM - 4:00 PM</td>
+                            <td>Lab</td>
+                            <td>DAA</td>
+                            <td>Prof.P.Joglekar</td>
+                        </tr>
+                        <tr>
+                            <td>4:00 PM - 6:00 PM</td>
+                            <td>Lab</td>
+                            <td>COmpiler Design</td>
+                            <td>Prof.Dr.S.Phatangare</td>
+                        </tr>
+                    </tbody>    
+                    </table>
+                    </div>
+
+                    <div class="tab-pane fade" id="fri" role="tabpanel" aria-labelledby="fri-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Component</th>
+                                    <th>Class</th>
+                                    <th>Teacher</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2:00 PM - 3:00 PM</td>
+                                    <td>Tutorial</td>
+                                    <td>Web Technology</td>
+                                    <td>Prof.Dr.M.L.Dhore</td>
+                                </tr>
+                                <tr>
+                                    <td>3:00 PM - 4:00 PM</td>
+                                    <td>Tutorial</td>
+                                    <td>DAA</td>
+                                    <td>Prof.P.Joglekar</td>
+                                </tr>
+                                <tr>
+                                    <td>4:00 PM - 5:00 PM</td>
+                                    <td>Tutorial</td>
+                                    <td>Cloud Computing</td>
+                                    <td>Prof.Dr.R.Kulkarni</td>
+                                </tr>
+                                <tr>
+                                    <td>5:00 PM - 6:00 PM</td>
+                                    <td>Tutorial</td>
+                                    <td>Compiler Design</td>
+                                    <td>Prof.Dr.S.Phatangare</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane fade" id="sat" role="tabpanel" aria-labelledby="sat-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Nothing Scheduled</td>
+                                </tr>
+                               
+                            </tbody>    
+                            </table>
+                            </div>
+                            <div class="tab-pane fade" id="sun" role="tabpanel" aria-labelledby="sun-tab">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Nothing Scheduled</td>
+                                        </tr>
+                                       
+                                    </tbody>    
+                                    </table>
+                                    </div>
+
+                    </div>
